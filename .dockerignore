@@ -1,0 +1,9 @@
+.git
+warehouse
+.sqlmesh
+.cache
+data/traces
+**/__pycache__
+**/*.pyc
+.pytest_cache
+.ruff_cache

@@ -1,0 +1,63 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  name: living-cost-squeeze
+spec:
+  serviceAccountName: squeeze-workflow
+  entrypoint: pipeline
+  volumes:
+    - name: work
+      hostPath:
+        path: /tmp/squeeze-work
+        type: DirectoryOrCreate
+  templates:
+    - name: pipeline
+      dag:
+        tasks:
+          - name: audit
+            template: step
+            arguments:
+              parameters:
+                - name: step
+                  value: audit
+          - name: transform
+            depends: audit
+            template: step
+            arguments:
+              parameters:
+                - name: step
+                  value: transform
+          - name: nowcast
+            depends: transform
+            template: step
+            arguments:
+              parameters:
+                - name: step
+                  value: nowcast
+                - name: fast
+                  value: "1"
+          - name: publish
+            depends: nowcast
+            template: step
+            arguments:
+              parameters:
+                - name: step
+                  value: publish
+    - name: step
+      inputs:
+        parameters:
+          - name: step
+          - name: fast
+            value: "0"
+      container:
+        image: living-cost-squeeze:local
+        imagePullPolicy: Never
+        workingDir: /opt/squeeze
+        command: ["python", "-m", "squeeze.cli"]
+        args: ["step", "{{inputs.parameters.step}}"]
+        env:
+          - name: NOWCAST_FAST
+            value: "{{inputs.parameters.fast}}"
+        volumeMounts:
+          - name: work
+            mountPath: /opt/squeeze/warehouse

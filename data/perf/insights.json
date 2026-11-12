@@ -1,0 +1,507 @@
+{
+  "employee_lci_yoy_2026q3": 5.1,
+  "employee_lci_yoy_2026q2": 3.7,
+  "cpi_yoy_2026q3": 3.9205855810688917,
+  "cpi_yoy_2026q2": 3.9418876358833677,
+  "wage_yoy_2026q2": 3.2,
+  "wage_sectors_2026q2": {
+    "2": 3.4,
+    "7": 3.2,
+    "1": 3.1
+  },
+  "since_2021q3_to_2026q2": {
+    "P1": 28.893058161350837,
+    "P2": 24.394359407014576,
+    "P3": 26.365302382406863,
+    "P4": 21.673003802281386,
+    "PBLCI": 25.284986660198893,
+    "prices": 23.013105687146805,
+    "wages": 17.599999999999994
+  },
+  "since_2021q3_to_2026q3": {
+    "P1": 31.394621638524068,
+    "P2": 25.756297456912147,
+    "P3": 28.10018326206476,
+    "P4": 23.312737642585567,
+    "PBLCI": 26.849381518311908,
+    "prices": 24.612239990381134
+  },
+  "mortgage_employee_2026q3": {
+    "yoy": 12.9,
+    "change": 0.79,
+    "all_change": 2.0,
+    "share": 0.395,
+    "index": 112.85
+  },
+  "interest_weight_employee": {
+    "2022-Q3": 6.21,
+    "2023-Q4": 12.48,
+    "2024-Q4": 14.94
+  },
+  "states_2026q2": [
+    {
+      "code": "6",
+      "state": "Tasmania",
+      "capital": "Hobart",
+      "wage_yoy": 2.9,
+      "cpi_yoy": 4.699286442405715,
+      "gap": -1.7992864424057147
+    },
+    {
+      "code": "7",
+      "state": "Northern Territory",
+      "capital": "Darwin",
+      "wage_yoy": 2.8,
+      "cpi_yoy": 3.834838186060674,
+      "gap": -1.0348381860606741
+    },
+    {
+      "code": "1",
+      "state": "New South Wales",
+      "capital": "Sydney",
+      "wage_yoy": 3.1,
+      "cpi_yoy": 4.082461663450787,
+      "gap": -0.982461663450787
+    },
+    {
+      "code": "4",
+      "state": "South Australia",
+      "capital": "Adelaide",
+      "wage_yoy": 3.6,
+      "cpi_yoy": 4.384896467722288,
+      "gap": -0.7848964677222878
+    },
+    {
+      "code": "5",
+      "state": "Western Australia",
+      "capital": "Perth",
+      "wage_yoy": 3.3,
+      "cpi_yoy": 3.99918798213561,
+      "gap": -0.6991879821356104
+    },
+    {
+      "code": "8",
+      "state": "Australian Capital Territory",
+      "capital": "Canberra",
+      "wage_yoy": 3.3,
+      "cpi_yoy": 3.99552663684426,
+      "gap": -0.6955266368442601
+    },
+    {
+      "code": "3",
+      "state": "Queensland",
+      "capital": "Brisbane",
+      "wage_yoy": 3.4,
+      "cpi_yoy": 4.085167074164642,
+      "gap": -0.6851670741646418
+    },
+    {
+      "code": "2",
+      "state": "Victoria",
+      "capital": "Melbourne",
+      "wage_yoy": 3.1,
+      "cpi_yoy": 3.5337124289195776,
+      "gap": -0.4337124289195775
+    }
+  ],
+  "industries_2026q2": {
+    "7": [
+      {
+        "code": "M",
+        "name": "Professional services",
+        "yoy": 2.5
+      },
+      {
+        "code": "K",
+        "name": "Finance",
+        "yoy": 2.7
+      },
+      {
+        "code": "N",
+        "name": "Admin and support",
+        "yoy": 2.7
+      },
+      {
+        "code": "H",
+        "name": "Hospitality",
+        "yoy": 2.8
+      },
+      {
+        "code": "P",
+        "name": "Education",
+        "yoy": 2.8
+      },
+      {
+        "code": "G",
+        "name": "Retail",
+        "yoy": 2.9
+      },
+      {
+        "code": "L",
+        "name": "Real estate services",
+        "yoy": 3.1
+      },
+      {
+        "code": "F",
+        "name": "Wholesale",
+        "yoy": 3.2
+      },
+      {
+        "code": "C",
+        "name": "Manufacturing",
+        "yoy": 3.3
+      },
+      {
+        "code": "E",
+        "name": "Construction",
+        "yoy": 3.3
+      },
+      {
+        "code": "R",
+        "name": "Arts and recreation",
+        "yoy": 3.3
+      },
+      {
+        "code": "J",
+        "name": "Media and telecom",
+        "yoy": 3.4
+      },
+      {
+        "code": "S",
+        "name": "Other services",
+        "yoy": 3.4
+      },
+      {
+        "code": "B",
+        "name": "Mining",
+        "yoy": 3.5
+      },
+      {
+        "code": "I",
+        "name": "Transport",
+        "yoy": 3.5
+      },
+      {
+        "code": "D",
+        "name": "Utilities",
+        "yoy": 3.6
+      },
+      {
+        "code": "O",
+        "name": "Public administration",
+        "yoy": 3.6
+      },
+      {
+        "code": "Q",
+        "name": "Health and care",
+        "yoy": 3.8
+      }
+    ],
+    "1": [
+      {
+        "code": "M",
+        "name": "Professional services",
+        "yoy": 2.5
+      },
+      {
+        "code": "K",
+        "name": "Finance",
+        "yoy": 2.6
+      },
+      {
+        "code": "N",
+        "name": "Admin and support",
+        "yoy": 2.6
+      },
+      {
+        "code": "H",
+        "name": "Hospitality",
+        "yoy": 2.7
+      },
+      {
+        "code": "G",
+        "name": "Retail",
+        "yoy": 2.9
+      },
+      {
+        "code": "P",
+        "name": "Education",
+        "yoy": 2.9
+      },
+      {
+        "code": "O",
+        "name": "Public administration",
+        "yoy": 3.1
+      },
+      {
+        "code": "R",
+        "name": "Arts and recreation",
+        "yoy": 3.1
+      },
+      {
+        "code": "C",
+        "name": "Manufacturing",
+        "yoy": 3.2
+      },
+      {
+        "code": "F",
+        "name": "Wholesale",
+        "yoy": 3.2
+      },
+      {
+        "code": "I",
+        "name": "Transport",
+        "yoy": 3.2
+      },
+      {
+        "code": "L",
+        "name": "Real estate services",
+        "yoy": 3.2
+      },
+      {
+        "code": "E",
+        "name": "Construction",
+        "yoy": 3.3
+      },
+      {
+        "code": "S",
+        "name": "Other services",
+        "yoy": 3.4
+      },
+      {
+        "code": "B",
+        "name": "Mining",
+        "yoy": 3.5
+      },
+      {
+        "code": "J",
+        "name": "Media and telecom",
+        "yoy": 3.5
+      },
+      {
+        "code": "Q",
+        "name": "Health and care",
+        "yoy": 4.1
+      },
+      {
+        "code": "D",
+        "name": "Utilities",
+        "yoy": 4.3
+      }
+    ]
+  },
+  "unemployment": [
+    {
+      "region": "1",
+      "name": "New South Wales",
+      "month": "2026-09",
+      "rate": 4.70759203
+    },
+    {
+      "region": "2",
+      "name": "Victoria",
+      "month": "2026-09",
+      "rate": 5.05201098
+    },
+    {
+      "region": "3",
+      "name": "Queensland",
+      "month": "2026-09",
+      "rate": 4.52899393
+    },
+    {
+      "region": "4",
+      "name": "South Australia",
+      "month": "2026-09",
+      "rate": 4.16642717
+    },
+    {
+      "region": "5",
+      "name": "Western Australia",
+      "month": "2026-09",
+      "rate": 4.22266694
+    },
+    {
+      "region": "6",
+      "name": "Tasmania",
+      "month": "2026-09",
+      "rate": 4.96563777
+    },
+    {
+      "region": "AUS",
+      "name": "Australia",
+      "month": "2026-09",
+      "rate": 4.71834873
+    }
+  ],
+  "cash_decisions": [
+    {
+      "date": "2025-02-19",
+      "rate": 4.1,
+      "change": "-0.25"
+    },
+    {
+      "date": "2025-05-21",
+      "rate": 3.85,
+      "change": "-0.25"
+    },
+    {
+      "date": "2025-08-13",
+      "rate": 3.6,
+      "change": "-0.25"
+    },
+    {
+      "date": "2026-02-04",
+      "rate": 3.85,
+      "change": "+0.25"
+    },
+    {
+      "date": "2026-03-18",
+      "rate": 4.1,
+      "change": "+0.25"
+    },
+    {
+      "date": "2026-05-06",
+      "rate": 4.35,
+      "change": "+0.25"
+    },
+    {
+      "date": "2026-09-30",
+      "rate": 4.6,
+      "change": "+0.25"
+    },
+    {
+      "date": "2026-11-04",
+      "rate": 4.85,
+      "change": "+0.25"
+    }
+  ],
+  "nowcast": [
+    {
+      "series_id": "cpi",
+      "label": "Prices",
+      "group_name": "prices",
+      "model_name": "AutoARIMA",
+      "history_end": "2026-Q3",
+      "target_period": "2026-Q4",
+      "point_yoy": 4.275688009460388,
+      "lo80_yoy": 3.4896850595601547,
+      "hi80_yoy": 5.061690959360621,
+      "lo95_yoy": 3.1457078969423735,
+      "hi95_yoy": 5.405668121978424,
+      "mae_yoy": 0.5925607750469153,
+      "rmse_yoy": 0.7410592099130223,
+      "coverage80": 0.8,
+      "coverage95": 1.0,
+      "n_windows": 20
+    },
+    {
+      "series_id": "lci_P1",
+      "label": "Working households",
+      "group_name": "living_cost",
+      "model_name": "AutoARIMA",
+      "history_end": "2026-Q3",
+      "target_period": "2026-Q4",
+      "point_yoy": 6.39123583758574,
+      "lo80_yoy": 5.523101455271817,
+      "hi80_yoy": 7.259370219899641,
+      "lo95_yoy": 4.756667646423485,
+      "hi95_yoy": 8.025804028747995,
+      "mae_yoy": 0.6991872174002323,
+      "rmse_yoy": 0.893755136844423,
+      "coverage80": 0.75,
+      "coverage95": 1.0,
+      "n_windows": 20
+    },
+    {
+      "series_id": "lci_P2",
+      "label": "Age pensioners",
+      "group_name": "living_cost",
+      "model_name": "AutoARIMA",
+      "history_end": "2026-Q3",
+      "target_period": "2026-Q4",
+      "point_yoy": 5.003563691032831,
+      "lo80_yoy": 4.193971462685053,
+      "hi80_yoy": 5.81315591938063,
+      "lo95_yoy": 3.436593951148481,
+      "hi95_yoy": 6.57053343091718,
+      "mae_yoy": 0.6940918447460687,
+      "rmse_yoy": 0.8443313335537638,
+      "coverage80": 0.55,
+      "coverage95": 0.85,
+      "n_windows": 20
+    },
+    {
+      "series_id": "lci_P3",
+      "label": "Other payment households",
+      "group_name": "living_cost",
+      "model_name": "AutoARIMA",
+      "history_end": "2026-Q3",
+      "target_period": "2026-Q4",
+      "point_yoy": 5.684376997288898,
+      "lo80_yoy": 4.594442838963153,
+      "hi80_yoy": 6.774311155614643,
+      "lo95_yoy": 4.286690898432055,
+      "hi95_yoy": 7.082063096145763,
+      "mae_yoy": 0.7786278340796826,
+      "rmse_yoy": 0.9358802983617059,
+      "coverage80": 0.65,
+      "coverage95": 0.9,
+      "n_windows": 20
+    },
+    {
+      "series_id": "lci_P4",
+      "label": "Self-funded retirees",
+      "group_name": "living_cost",
+      "model_name": "AutoARIMA",
+      "history_end": "2026-Q3",
+      "target_period": "2026-Q4",
+      "point_yoy": 4.015791246505462,
+      "lo80_yoy": 3.1530392715868327,
+      "hi80_yoy": 4.878543221424092,
+      "lo95_yoy": 2.942045346573674,
+      "hi95_yoy": 5.0895371464372285,
+      "mae_yoy": 0.5805502646949834,
+      "rmse_yoy": 0.7068141569933302,
+      "coverage80": 0.65,
+      "coverage95": 0.9,
+      "n_windows": 20
+    },
+    {
+      "series_id": "lci_PBLCI",
+      "label": "Pensioner benchmark",
+      "group_name": "living_cost",
+      "model_name": "AutoARIMA",
+      "history_end": "2026-Q3",
+      "target_period": "2026-Q4",
+      "point_yoy": 5.310879792243117,
+      "lo80_yoy": 4.312660533878643,
+      "hi80_yoy": 6.309099050607592,
+      "lo95_yoy": 3.839242650282504,
+      "hi95_yoy": 6.782516934203753,
+      "mae_yoy": 0.7217488784997095,
+      "rmse_yoy": 0.8732447342788828,
+      "coverage80": 0.5,
+      "coverage95": 0.9,
+      "n_windows": 20
+    },
+    {
+      "series_id": "wpi",
+      "label": "Wages",
+      "group_name": "wages",
+      "model_name": "AutoARIMA",
+      "history_end": "2026-Q2",
+      "target_period": "2026-Q3",
+      "point_yoy": 3.2261375586726038,
+      "lo80_yoy": 2.9803561851637905,
+      "hi80_yoy": 3.471918932181439,
+      "lo95_yoy": 2.8832066414203217,
+      "hi95_yoy": 3.569068475924908,
+      "mae_yoy": 0.15141040042664478,
+      "rmse_yoy": 0.21416503111489468,
+      "coverage80": 0.65,
+      "coverage95": 0.8,
+      "n_windows": 20
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "steps": [
+    {
+      "name": "quality_gate",
+      "duration_ms": 61.19,
+      "status": "UNSET",
+      "attributes": {
+        "duration_ms": 61.16
+      }
+    },
+    {
+      "name": "sqlmesh_prod",
+      "duration_ms": 1641.17,
+      "status": "UNSET",
+      "attributes": {
+        "duration_ms": 1641.12
+      }
+    },
+    {
+      "name": "sqlmesh_dev",
+      "duration_ms": 1601.87,
+      "status": "UNSET",
+      "attributes": {
+        "duration_ms": 1601.82
+      }
+    },
+    {
+      "name": "nowcast",
+      "duration_ms": 493129.42,
+      "status": "UNSET",
+      "attributes": {
+        "duration_ms": 493129.38
+      }
+    },
+    {
+      "name": "dashboard",
+      "duration_ms": 30.26,
+      "status": "UNSET",
+      "attributes": {
+        "duration_ms": 30.24
+      }
+    }
+  ],
+  "total_ms": 496463.91,
+  "snapshot_bytes": 191780,
+  "warehouse_bytes": 8400896,
+  "cost_aud": 0
+}
