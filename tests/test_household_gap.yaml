@@ -1,0 +1,27 @@
+test_wage_gap_when_pay_trails_living_costs:
+  model: gold.household_gap
+  description: Pay is behind when wage growth is lower than living-cost growth.
+  inputs:
+    silver.lci_all_groups:
+      rows:
+        - time_period: 2026-Q2
+          household_type: P1
+          lci_index: 100.0
+          lci_yoy: 4.0
+    silver.wage_national:
+      rows:
+        - time_period: 2026-Q2
+          wage_yoy: 3.0
+          wage_index: 110.0
+    silver.cpi_national:
+      rows:
+        - time_period: 2026-Q2
+          cpi_yoy: 2.5
+          cpi_index: 100.0
+  outputs:
+    query:
+      partial: true
+      rows:
+        - household_type: P1
+          wage_minus_living_cost_pp: -1.0
+          living_cost_minus_cpi_pp: 1.5

@@ -1,0 +1,171 @@
+{
+  "project": "living-cost-squeeze",
+  "access_date": "2026-11-12",
+  "access_note": "Downloaded by scripts/refresh_snapshot.py. ABS and tidy cash-rate files keep the published values with a lower-case header. Dates in the dashboard are shown in Australian Eastern time.",
+  "files": [
+    {
+      "path": "data/snapshot/lci.csv.gz",
+      "sha256": "7f8cfab57df15e954859f391ffb05e0fa6e968055f6a42fd6c978e10d6c35b7e",
+      "bytes": 73428,
+      "rows": 15497,
+      "coverage": "2004-Q1 to 2026-Q3",
+      "source_url": "https://data.api.abs.gov.au/rest/data/LCI/1+2+3+4.10001+20001+20002+20003+20004+20005+20006+30016+115486+115488+115489+115493+115522+126670+130427+131278.PBLCI+P1+P2+P3+P4.50.Q?startPeriod=2004-Q1&dimensionAtObservation=AllDimensions",
+      "publisher": "Australian Bureau of Statistics",
+      "series": "Selected Living Cost Indexes",
+      "licence": "CC BY 4.0",
+      "notes": "Quarterly index, quarterly change, annual change, and points contribution for household types and the main groups. National only."
+    },
+    {
+      "path": "data/snapshot/lci_contribution.csv.gz",
+      "sha256": "a38490ea2f6d7c1c68bc992a385fabc66d602c69806b1a10aa4410b2462db7fe",
+      "bytes": 756,
+      "rows": 120,
+      "coverage": "2025-Q4 to 2026-Q3",
+      "source_url": "https://data.api.abs.gov.au/rest/data/LCI/5.10001+20001+20003+20005+115486+130427+131278.PBLCI+P1+P2+P3+P4.50.Q?startPeriod=2018-Q1&dimensionAtObservation=AllDimensions",
+      "publisher": "Australian Bureau of Statistics",
+      "series": "Selected Living Cost Indexes, change in contribution",
+      "licence": "CC BY 4.0",
+      "notes": "Measure 5, change in points contribution. Sparse before the latest years."
+    },
+    {
+      "path": "data/snapshot/lci_weights.csv.gz",
+      "sha256": "66a926a253971b67b6dbc1b7c33265df9de8d8e80e96959ab7114a8ed4b03e93",
+      "bytes": 1482,
+      "rows": 225,
+      "coverage": "2022-Q3 to 2024-Q4",
+      "source_url": "https://data.api.abs.gov.au/rest/data/LCI_WEIGHTS/1.10001+20001+20002+20003+20004+20005+20006+30016+115486+115488+115489+115493+115522+126670+130427+131278.PBLCI+P1+P2+P3+P4.50.Q?startPeriod=2010-Q1&dimensionAtObservation=AllDimensions",
+      "publisher": "Australian Bureau of Statistics",
+      "series": "Selected Living Cost Indexes weights",
+      "licence": "CC BY 4.0",
+      "notes": "Budget weights at the updates the API returns. Mortgage interest as its own weight (item 131278) is not in this extract; interest charges (130427) are."
+    },
+    {
+      "path": "data/snapshot/wpi_total.csv.gz",
+      "sha256": "f5ebf03fe7733952840cf08ad3340502a95fd5bf12caf79a28b6bc6fb3f067d2",
+      "bytes": 32702,
+      "rows": 7380,
+      "coverage": "2004-Q1 to 2026-Q2",
+      "source_url": "https://data.api.abs.gov.au/rest/data/WPI/1+3.THRPEB+OHRPEB.7+1+2.TOT.10+20.AUS+1+2+3+4+5+6+7+8.Q?startPeriod=2004-Q1&dimensionAtObservation=AllDimensions",
+      "publisher": "Australian Bureau of Statistics",
+      "series": "Wage Price Index, total hourly and ordinary-time rates",
+      "licence": "CC BY 4.0",
+      "notes": "All industries. Seasonally adjusted figures are national. State figures in this extract are original."
+    },
+    {
+      "path": "data/snapshot/wpi_industry.csv.gz",
+      "sha256": "c8fadfbe053cd99a3bdc39f0bf91c9a5c988d9b64390fe49c53d331bd711d038",
+      "bytes": 18935,
+      "rows": 4176,
+      "coverage": "2012-Q1 to 2026-Q2",
+      "source_url": "https://data.api.abs.gov.au/rest/data/WPI/1+3.THRPEB.7+1.B+C+D+E+F+G+H+I+J+K+L+M+N+O+P+Q+R+S.10.AUS.Q?startPeriod=2012-Q1&dimensionAtObservation=AllDimensions",
+      "publisher": "Australian Bureau of Statistics",
+      "series": "Wage Price Index by industry division",
+      "licence": "CC BY 4.0",
+      "notes": "Original total hourly rates excluding bonuses, all-sectors and private. Agriculture (ANZSIC A) and seasonally adjusted industry keys return HTTP 404."
+    },
+    {
+      "path": "data/snapshot/cpi.csv.gz",
+      "sha256": "6c2461e015d557898c4ec043e97c2f3330b2f7cb202762cde2549595adeb8f6e",
+      "bytes": 4378,
+      "rows": 819,
+      "coverage": "2004-Q1 to 2026-Q3",
+      "source_url": "https://data.api.abs.gov.au/rest/data/CPI/1.10001.10.50+1+2+3+4+5+6+7+8.Q?startPeriod=2004-Q1&dimensionAtObservation=AllDimensions",
+      "publisher": "Australian Bureau of Statistics",
+      "series": "Consumer Price Index, all groups, original",
+      "licence": "CC BY 4.0",
+      "notes": "Index numbers for the weighted average of eight capital cities and each capital. Annual change is calculated in the silver layer because the percentage-change key returns HTTP 404."
+    },
+    {
+      "path": "data/snapshot/unemployment.csv.gz",
+      "sha256": "8d38e18b523038c721afb0fea2f89a8444258fbd9a7c2d8d3a32ddbf320891cf",
+      "bytes": 8529,
+      "rows": 987,
+      "coverage": "2015-01 to 2026-09",
+      "source_url": "https://data.api.abs.gov.au/rest/data/LF/M13.3.1599.20.AUS+1+2+3+4+5+6+7+8.M?startPeriod=2015-01&dimensionAtObservation=AllDimensions",
+      "publisher": "Australian Bureau of Statistics",
+      "series": "Labour force unemployment rate, seasonally adjusted",
+      "licence": "CC BY 4.0",
+      "notes": "Persons, all ages, seasonally adjusted. Regions returned: 1, 2, 3, 4, 5, 6, AUS. Northern Territory and the ACT are absent from this key when the API does not publish a seasonally adjusted rate for them."
+    },
+    {
+      "path": "data/snapshot/rba_a2.csv",
+      "sha256": "c220805349da6493610b32d788276b8732fbd8abbc517db9c1eea1fce8bb7ac3",
+      "bytes": 5324,
+      "rows": 269,
+      "source_url": "https://www.rba.gov.au/statistics/tables/csv/a2-data.csv",
+      "publisher": "Reserve Bank of Australia",
+      "series": "A2 changes in monetary policy",
+      "licence": "Free to reuse with attribution (RBA copyright)",
+      "coverage": "decision dates",
+      "notes": "Exact response bytes, including the preamble."
+    },
+    {
+      "path": "data/snapshot/rba_f1.csv",
+      "sha256": "52de6eef28ba1008bdde43546944b270ef08dca4c9b6282bb34846820a490ce2",
+      "bytes": 43917,
+      "rows": 9997,
+      "source_url": "https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv",
+      "publisher": "Reserve Bank of Australia",
+      "series": "F1.1 interest rates and yields, money market",
+      "licence": "Free to reuse with attribution (RBA copyright)",
+      "coverage": "monthly",
+      "notes": "Exact response bytes. The cash-rate target is the second column."
+    },
+    {
+      "path": "data/snapshot/rba_cash_rate.csv.gz",
+      "sha256": "5a60d6b4b0546856bef735ed985f236c5758b6bcef2d48176e6a61f7e4d0e0ca",
+      "bytes": 2329,
+      "rows": 535,
+      "coverage": "decisions 1990-01-23 to 2026-11-04; months to 2026-10-31",
+      "source_url": "https://www.rba.gov.au/statistics/tables/csv/a2-data.csv",
+      "publisher": "Reserve Bank of Australia",
+      "series": "Cash-rate target, tidy extract of A2 and F1.1",
+      "licence": "Free to reuse with attribution (RBA copyright)",
+      "notes": "Derived from the raw A2 and F1.1 files in this snapshot. Not a separate download."
+    }
+  ],
+  "unavailable": [
+    {
+      "series": "Seasonally adjusted unemployment, Northern Territory and ACT",
+      "attempted_url": "https://data.api.abs.gov.au/rest/data/LF/M13.3.1599.20.AUS+1+2+3+4+5+6+7+8.M?startPeriod=2015-01&dimensionAtObservation=AllDimensions",
+      "result": "HTTP 200 but regions present were 1, 2, 3, 4, 5, 6, AUS",
+      "adaptation": "The state page shows the jobless rate only where this extract has it."
+    },
+    {
+      "series": "Trimmed-mean CPI",
+      "attempted_url": "https://data.api.abs.gov.au/rest/data/CPI/1+3.999902.10.50.Q?startPeriod=2018-Q1&dimensionAtObservation=AllDimensions",
+      "result": "HTTP 404 on the access date",
+      "adaptation": "Headline CPI is calculated from the all-groups index. The trimmed mean is not shown."
+    },
+    {
+      "series": "CPI annual percentage change",
+      "attempted_url": "https://data.api.abs.gov.au/rest/data/CPI/3.10001.10.50.Q?startPeriod=2024-Q1&dimensionAtObservation=AllDimensions",
+      "result": "HTTP 404 on the access date",
+      "adaptation": "Annual price change is index(t) / index(t-4) - 1, from the published index."
+    },
+    {
+      "series": "Wage Price Index, agriculture and seasonally adjusted industries",
+      "attempted_url": "https://data.api.abs.gov.au/rest/data/WPI/3.THRPEB.7.A+C.20.AUS.Q?startPeriod=2024-Q1&dimensionAtObservation=AllDimensions",
+      "result": "HTTP 404 on the access date",
+      "adaptation": "Industry wages use the original series for divisions B to S. Agriculture is omitted."
+    },
+    {
+      "series": "ANZ-Roy Morgan consumer confidence",
+      "attempted_url": "",
+      "result": "No open, key-free bulk file. The survey is proprietary.",
+      "adaptation": "Confidence is not in the snapshot or the dashboard."
+    },
+    {
+      "series": "Wage Price Index, September quarter 2026",
+      "attempted_url": "https://data.api.abs.gov.au/rest/data/WPI/1+3.THRPEB+OHRPEB.7+1+2.TOT.10+20.AUS+1+2+3+4+5+6+7+8.Q?startPeriod=2004-Q1&dimensionAtObservation=AllDimensions",
+      "result": "Not in the API extract. The ABS release is scheduled for 18 November 2026.",
+      "adaptation": "The next-quarter page estimates the September wage result from the published history."
+    },
+    {
+      "series": "Selected living cost indexes by state",
+      "attempted_url": "https://data.api.abs.gov.au/rest/data/LCI/1+2+3+4.10001+20001+20002+20003+20004+20005+20006+30016+115486+115488+115489+115493+115522+126670+130427+131278.PBLCI+P1+P2+P3+P4.50.Q?startPeriod=2004-Q1&dimensionAtObservation=AllDimensions",
+      "result": "The selected living cost indexes are published for Australia, not by state.",
+      "adaptation": "The state page pairs each state's wages with its capital-city price index."
+    }
+  ]
+}
