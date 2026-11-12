@@ -19,7 +19,7 @@ lint:
 	python3 -m ruff check src tests scripts
 
 sqlmesh-test:
-	python3 -m sqlmesh test --local
+	sqlmesh test --local
 
 test:
 	python3 -m pytest -q
