@@ -55,6 +55,7 @@ function show(data, id) {
   const means = view.means || page.means;
   if (means) root.append(meansBox(means));
   if (page.exact) root.append(exactBox(page.exact));
+  fitCharts(root);
 }
 
 function currentView(page, id) {
@@ -192,6 +193,68 @@ function svgEl(name, attrs) {
   return node;
 }
 
+function fitCharts(root) {
+  root.querySelectorAll("svg").forEach((svg) => {
+    if (!svg.isConnected) return;
+    thinAxisLabels(svg);
+    padSvgToText(svg);
+  });
+}
+
+function thinAxisLabels(svg) {
+  const nodes = [...svg.querySelectorAll("text.x-axis")];
+  const gap = 14;
+  const kept = [];
+  nodes.forEach((node, index) => {
+    const box = node.getBBox();
+    const isLast = index === nodes.length - 1;
+    const overlapsKept = () => kept.some((other) => {
+      const previous = other.getBBox();
+      return box.x < previous.x + previous.width + gap && previous.x < box.x + box.width + gap;
+    });
+    if (!kept.length || !overlapsKept()) {
+      kept.push(node);
+      return;
+    }
+    if (!isLast) {
+      node.remove();
+      return;
+    }
+    while (kept.length && overlapsKept()) kept.pop().remove();
+    kept.push(node);
+  });
+}
+
+function padSvgToText(svg) {
+  const parts = svg.getAttribute("viewBox").split(/[\s,]+/).map(Number);
+  const originX = parts[0];
+  const originY = parts[1];
+  const limitX = originX + parts[2];
+  const limitY = originY + parts[3];
+  let minX = originX;
+  let minY = originY;
+  let maxX = limitX;
+  let maxY = limitY;
+  svg.querySelectorAll("text").forEach((node) => {
+    const box = node.getBBox();
+    if (box.width <= 0) return;
+    minX = Math.min(minX, box.x);
+    minY = Math.min(minY, box.y);
+    maxX = Math.max(maxX, box.x + box.width);
+    maxY = Math.max(maxY, box.y + box.height);
+  });
+  const slack = 1;
+  const pad = 10;
+  const nextX = minX < originX - slack ? minX - pad : originX;
+  const nextY = minY < originY - slack ? minY - pad : originY;
+  const nextRight = maxX > limitX + slack ? maxX + pad : limitX;
+  const nextBottom = maxY > limitY + slack ? maxY + pad : limitY;
+  if (nextX === originX && nextY === originY && nextRight === limitX && nextBottom === limitY) return;
+  const x = Math.floor(nextX);
+  const y = Math.floor(nextY);
+  svg.setAttribute("viewBox", `${x} ${y} ${Math.ceil(nextRight) - x} ${Math.ceil(nextBottom) - y}`);
+}
+
 function lineChart(chart) {
   const width = 860;
   const height = 430;
@@ -219,15 +282,12 @@ function lineChart(chart) {
     svg.append(label);
   });
   const step = chart.x.length > 12 ? Math.ceil(chart.x.length / 7) : 1;
-  let lastTickX = -999;
   chart.x.forEach((label, index) => {
     const last = index === chart.x.length - 1;
     if (index % step !== 0 && !last) return;
     const x = xOf(index);
-    if (last && x - lastTickX < 56) return;
-    lastTickX = x;
     const anchor = index === 0 ? "start" : last ? "end" : "middle";
-    const text = svgEl("text", { x, y: height - 12, "text-anchor": anchor, class: "axis" });
+    const text = svgEl("text", { x, y: height - 12, "text-anchor": anchor, class: "axis x-axis" });
     text.textContent = label;
     svg.append(text);
   });
@@ -268,7 +328,13 @@ function lineChart(chart) {
     endLabels.push({ y: last[1], text: `${series.name} ${formatTick(lastValue, chart.unit)}`, color: series.color });
   });
   spread(endLabels, top + 8, top + plotH - 4, 16).forEach((label) => {
-    const text = svgEl("text", { x: left + plotW + 10, y: label.y + 4, fill: label.color, "font-size": "12" });
+    const text = svgEl("text", {
+      x: left + plotW + 10,
+      y: label.y + 4,
+      fill: label.color,
+      "font-size": "12",
+      class: "end-label",
+    });
     text.textContent = label.text;
     svg.append(text);
   });
