@@ -19,6 +19,8 @@ from squeeze.tracing import setup_tracing, shutdown_tracing, step
 
 
 def _plan(environment: str) -> None:
+    # DuckDB will create the file, but not a missing parent directory.
+    WAREHOUSE.parent.mkdir(parents=True, exist_ok=True)
     binary = shutil.which("sqlmesh")
     if binary is None:
         raise SystemExit("sqlmesh is not on PATH. Install requirements.txt first.")
